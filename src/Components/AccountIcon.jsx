@@ -120,8 +120,8 @@ const AccountIcon = () => {
     
   return (
     <div>
-        <AccountCircleIcon onClick={handleOpen}/>
-        {(user) && <LogoutIcon onClick={logout}/>}
+        <AccountCircleIcon style={{margin:5, cursor: 'pointer'}} onClick={handleOpen}/>
+        {(user) && <LogoutIcon style={{margin:5, cursor: 'pointer'}} onClick={logout}/>}
 
         <Modal 
             open={open}

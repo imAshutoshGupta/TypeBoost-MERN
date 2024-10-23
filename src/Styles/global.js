@@ -8,8 +8,8 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body{
-    background:${({theme})=>theme.background};
-    color: ${({theme})=>theme.title};
+    background:${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.title};
     padding:0;
     margin:0;
     transition: all 0.25s linear;
@@ -46,7 +46,7 @@ body::-webkit-scrollbar{
     display: flex;
     flex-wrap: wrap;
     align-content:center;
-    color: ${({theme})=>theme.typeBoxText}
+    color: ${({ theme }) => theme.typeBoxText}
 }
 
 .word{
@@ -59,7 +59,7 @@ body::-webkit-scrollbar{
 }
 
 .correct{
-    color: ${({theme})=>theme.title};
+    color: ${({ theme }) => theme.title};
 }
 
 .incorrect{
@@ -121,6 +121,8 @@ body::-webkit-scrollbar{
 .left-stats{
     width: 30%;
     padding: 30px;
+    display:flex;
+    flex-direction:column;
 }
 
 .right-stats{
@@ -128,15 +130,24 @@ body::-webkit-scrollbar{
 }
 
 .title{
-    font-size: 20px;
-    color: ${({theme})=>theme.typeBoxText};
+    font-size: 30px;
+    color: ${({ theme }) => theme.typeBoxText};
 }
 
 .subtitle{
-    font-size: 30px;
-    color: ${({theme})=>theme.title};
+    font-size: 20px;
+    color: ${({ theme }) => theme.title};
 }
-
+.restart{
+    font-size: 45px;
+    color: ${({ theme }) => theme.typeBoxText};
+    border: 2px;
+    border-color: ${({ theme }) => theme.typeBoxText};
+    margin-top: 50px;
+}
+.restart:hover{
+    cursor: pointer;
+    }
 a{
     text-decoration: none;
     color: inherit;
@@ -157,10 +168,12 @@ a{
 }
 .time, .no-of-word{
     margin-right:5px;
+    padding: 0.2rem;
 }
 .time:hover, .no-of-word:hover{
-    color:${({theme})=>theme.typeBoxText};
+    color:${({ theme }) => theme.typeBoxText};
     cursor: pointer;
+    border: none;
 }
 
 .header{
@@ -187,7 +200,7 @@ a{
     margin: auto;
     display: flex;
     min-height: 15rem;
-    background: ${({theme})=>theme.typeBoxText};
+    background: ${({ theme }) => theme.typeBoxText};
     border-radius: 20px;
     justify-content: center;
     align-text: center;
@@ -243,38 +256,27 @@ a{
 
 .compare-btn{
     cursor: pointer;
-    color: ${({theme})=>theme.background};
-    background: ${({theme})=>theme.title};
+    color: ${({ theme }) => theme.background};
+    background: ${({ theme }) => theme.title};
     padding: 0.3rem;
     border-radius: 5px;
     margin-top: -5px;
 }
 
 .instruction{
-    color: ${({theme})=>theme.title};
+    color: ${({ theme }) => theme.title};
 }
 
 .hint{
     kbd{
-        background: ${({theme})=>theme.title};
-        color: ${({theme})=>theme.background};
+        background: ${({ theme }) => theme.title};
+        color: ${({ theme }) => theme.background};
         padding: 2.5px 5px;
         border-radius: 4px; 
     }
 }
 
-.active{
-    border: 1px solid;
-    padding: 3px;
-    margin: 4px;
-}
 
-.active-value{
-    border: 1px solid;
-    padding: 3px;
-    margin: 4px;
-    margin-top: -4px;
-}
 
 .logo-image{
     transform: scale(0.3);

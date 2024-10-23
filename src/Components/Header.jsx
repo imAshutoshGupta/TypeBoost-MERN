@@ -14,7 +14,7 @@ const Header = () => {
             </div>
             
         </div>
-        <div className="user-logo" style={{marginTop: '15px'}}>
+        <div className="user-logo" style={{marginTop: '15px', cursor: 'pointer'}}>
             <AccountIcon/>
         </div>
     </div>
